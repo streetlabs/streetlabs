@@ -1,0 +1,13 @@
+<div id="top">
+  <div class="navigaiton"> 
+    <% link_to(root_path) do %>
+      <span class="street">s<span class="street">treet</span></span><span class="labs">labs</span>
+    <% end %>
+    <span <%= fetch_class(home_path('about')) %>>&nbsp;&nbsp; <% link_to(home_path('about')) do %>About Us<% end %> </span>
+    <span <%= fetch_class(home_path('involved')) %>>&nbsp;&nbsp; <% link_to(home_path('involved')) do %>Get Involved<% end %></span>
+    <span <%= fetch_class(home_path('team')) %>>&nbsp;&nbsp; <% link_to(home_path('team')) do %>Our Team<% end %></span>
+    
+    <!-- <span class="links">&nbsp;&nbsp; <a href="/projects.html">Projects that use STREET<i>LABS</i></a>  </span> -->
+  </div>
+</div>
+

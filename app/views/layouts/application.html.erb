@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="We host project such as STREETPRINT and STREETMAG that people all around the world use to preseve and promote everthing from artifacts to popular print and culture." />
+  <title><%= h(yield(:title) || "STREETLABS | Home of open source, web based, collaborative software for Humanities Computing.") %></title>
+    <%= stylesheet_link_tag 'streetlabs' %>
+		<%= javascript_include_tag 'application' %>
+    <%= yield(:head) %>
+	<link rel="icon" href="images/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <%= render :partial => 'layouts/header' %>
+    <div id="wrapper">
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%- end -%>
+      
+        <%- if show_title? -%>
+          <h1><%=h yield(:title) %></h1>
+        <%- end -%> 
+        	<!--body part start-->
+    		<div id="bodyarea">
+    		  	<div id="bodyarea-wrap">
+    					<%= yield %>        
+    				</div>
+    		</div>
+    </div>
+		<%= render 'layouts/footer' %>
+  </body>
+</html>
