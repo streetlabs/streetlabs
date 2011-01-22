@@ -4,7 +4,7 @@
 #   helper :layout
 module LayoutHelper
   def title(page_title, show_title = false)
-    @content_for_title = ["Welome to SOLARO", page_title.to_s].join('-')
+    @content_for_title = ["Welome to STREETLABS", page_title.to_s].join('-')
     @show_title = show_title
   end
   
